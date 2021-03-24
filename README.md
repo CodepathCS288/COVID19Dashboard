@@ -1,43 +1,77 @@
-# COVID19 Dashboard
+# APP_NAME_HERE
 
+## Table of Contents
+1. [Overview](#Overview)
+1. [Product Spec](#Product-Spec)
+1. [Wireframes](#Wireframes)
+2. [Schema](#Schema)
 
-**COVID19 Dashboard** is an android app that allows to *add info here*
+## Overview
+### Description
+[Description of your app]
 
-By: **Akash Patel, Darshil Patel, Juhi Chaudhari**
+### App Evaluation
+[Evaluation of your app across the following attributes]
+- **Category:**
+- **Mobile:**
+- **Story:**
+- **Market:**
+- **Habit:**
+- **Scope:**
 
-Time spent: **num** hours spent in total
+## Product Spec
 
-## User Stories
+### 1. User Stories (Required and Optional)
 
-* [x] User can **
-* [x] User can **
-* [x] User can **
+**Required Must-have Stories**
 
+* [fill in your required user stories here]
+* ...
 
-## Video Walkthrough
+**Optional Nice-to-have Stories**
 
-Here's a walkthrough of implemented user stories:
+* [fill in your required user stories here]
+* ...
 
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+### 2. Screen Archetypes
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+* [list first screen here]
+   * [list associated required story here]
+   * ...
+* [list second screen here]
+   * [list associated required story here]
+   * ...
 
-## Notes
+### 3. Navigation
 
-Describe any challenges encountered while building the app.
+**Tab Navigation** (Tab to Screen)
 
-## License
+* [fill out your first tab]
+* [fill out your second tab]
+* [fill out your third tab]
 
-    Copyright [2021] [Akash Patel, Darshil Patel, Juhi Chaudhari]
+**Flow Navigation** (Screen to Screen)
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+* [list first screen here]
+   * [list screen navigation here]
+   * ...
+* [list second screen here]
+   * [list screen navigation here]
+   * ...
 
-        http://www.apache.org/licenses/LICENSE-2.0
+## Wireframes
+[Add picture of your hand sketched wireframes in this section]
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+### [BONUS] Digital Wireframes & Mockups
+
+### [BONUS] Interactive Prototype
+
+## Schema 
+[This section will be completed in Unit 9]
+### Models
+[Add table of models]
+### Networking
+- [Add list of network requests by screen ]
+- [Create basic snippets for each Parse network request]
+- [OPTIONAL: List endpoints if using existing API such as Yelp]
