@@ -1,4 +1,4 @@
-# APP_NAME_HERE
+# COVID DASHBOARD
 
 ## Table of Contents
 1. [Overview](#Overview)
