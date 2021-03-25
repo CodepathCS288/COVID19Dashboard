@@ -78,7 +78,6 @@ This app shows COVID related information in a simple UI form for users to get an
   * Shows Covid related headlines from NYT
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="wireframe.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
