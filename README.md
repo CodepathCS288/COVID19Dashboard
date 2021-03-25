@@ -85,7 +85,7 @@ This app shows COVID related information in a simple UI form for users to get an
 <img src=Digital-wire.gif width=200>
 
 ### [BONUS] Interactive Prototype
-<img src=Digital-mockup.JPG width=200>
+<img src=Digital-mockup.JPG width=600>
 
 ## Schema 
 [This section will be completed in Unit 9]
