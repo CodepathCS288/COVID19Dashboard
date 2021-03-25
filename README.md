@@ -42,8 +42,6 @@ This app shows COVID related information in a simple UI form for users to get an
   * Show them the data for their state
   * Certain elements will be clickable and the user will be able to view more information about that element
 * Element Screens
-  * Risk Levels
-    * Show more info on risk levels
   * Cases
     * Show more info on cases
   * Vaccinations
@@ -71,7 +69,6 @@ This app shows COVID related information in a simple UI form for users to get an
    * Leads to a state screen for any state the the user searches
 * State Screen
    * Shows the data for the state
-   * Element Risk Levels will be clickable and will lead to another screen that shows more data on Risk levels
    * Element Cases will also be clickable and will lead to another screen that shows all the data on COVID Cases
    * Element Vaccinations will also be clickable and will lead to another screen that shows all data on COVID Vaccinations in the state
 * Search Bar (Countries Tab)
