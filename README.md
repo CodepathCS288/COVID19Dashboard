@@ -11,7 +11,6 @@
 This app shows COVID related information in a simple UI form for users to get any information they need. They can filter it by States for USA and Counties for USA, and Countries across the world. There would also be a tab to stay up-to-date on the latest covid related news headlines from NY Times. The data shown will use three different api's one will be used to get data for the US, and the other will be used to get data for different countries in the world, and the last one will be used to get data for news headlines and links for each headline.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Educational/Utility
 - **Mobile:** This app is best used on a mobile however, it would work just as well on web as well because, It is basically going to display some data in a beautified way for the ease of use for the users.
 - **Story:** The user can access data related to COVID all in one place, also when planning a trip to a certain state or a country they can use the data to make informed decisions with ease as the data for different countries and states in US is updated daily so, the user will have the most recent and accurate data to make their decisions.
