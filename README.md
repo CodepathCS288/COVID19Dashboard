@@ -18,7 +18,7 @@ This app shows COVID related information in a simple UI form for users to get an
 - **Habit:** This app can be used as much as the user prefers to stay connected to COVID related data. It could be used daily to make day-to-day decisions about traveling if the user needs to travel for work.
 - **Scope:** The scope of this app is just to receive data about covid and make your own conclusions based on the stats received each day. Something similar to this app can easily be created to show information about something else like weather, or top news stories.
 
-## Product Spec
+## Product Specs
 
 ### 1. User Stories (Required and Optional)
 
