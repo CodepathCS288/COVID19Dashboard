@@ -79,7 +79,7 @@ This app shows COVID related information in a simple UI form for users to get an
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="wireframe.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 <img src=Digital-mockup.JPG width=600>
