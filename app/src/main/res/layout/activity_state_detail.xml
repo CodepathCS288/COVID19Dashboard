@@ -19,7 +19,7 @@
         android:background="@drawable/rounded_corners"
         android:fontFamily="sans-serif"
         android:textAlignment="center"
-        android:textColor="#B8B7B7"
+        android:textColor="#E1E1E1"
         app:autoSizeTextType="uniform"
         tools:text="NJ" />
 
@@ -39,7 +39,7 @@
         android:includeFontPadding="true"
         android:paddingTop="25dp"
         android:textAlignment="center"
-        android:textColor="#B8B7B7"
+        android:textColor="#E1E1E1"
         android:textSize="32sp"
         app:autoSizeTextType="none"
         tools:text="Population\n1234567890" />
@@ -59,7 +59,7 @@
         android:fontFamily="sans-serif"
         android:text="Risk\nLevel\n"
         android:textAlignment="center"
-        android:textColor="#B8B7B7"
+        android:textColor="#E1E1E1"
         app:autoSizeTextType="uniform" />
 
     <TextView
@@ -79,7 +79,7 @@
         android:paddingTop="30dp"
         android:text="Cases"
         android:textAlignment="center"
-        android:textColor="#B8B7B7"
+        android:textColor="#E1E1E1"
         android:textSize="60sp" />
 
     <TextView
@@ -96,7 +96,7 @@
         android:background="@drawable/rounded_corners"
         android:fontFamily="sans-serif"
         android:textAlignment="center"
-        android:textColor="#B8B7B7"
+        android:textColor="#E1E1E1"
         app:autoSizeTextType="uniform"
         tools:text="Positive\nTests\n1234567890" />
 
@@ -114,7 +114,7 @@
         android:background="@drawable/rounded_corners"
         android:fontFamily="sans-serif"
         android:textAlignment="center"
-        android:textColor="#B8B7B7"
+        android:textColor="#E1E1E1"
         app:autoSizeTextType="uniform"
         tools:text="Negative\n\Tests\n1234567890" />
 
@@ -132,7 +132,7 @@
         android:background="@drawable/rounded_corners"
         android:fontFamily="sans-serif"
         android:textAlignment="center"
-        android:textColor="#B8B7B7"
+        android:textColor="#E1E1E1"
         app:autoSizeTextType="uniform"
         tools:text="Infection\nRate\n1234567890" />
 
@@ -153,7 +153,7 @@
         android:paddingTop="50dp"
         android:text="Vaccinations"
         android:textAlignment="center"
-        android:textColor="#B8B7B7"
+        android:textColor="#E1E1E1"
         android:textSize="32sp"
         app:autoSizeTextType="none" />
 
