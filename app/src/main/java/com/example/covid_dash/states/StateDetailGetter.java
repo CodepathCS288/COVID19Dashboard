@@ -1,7 +1,11 @@
-package com.example.covid_dash;
+package com.example.covid_dash.states;
+
+import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.Serializable;
 
 public class StateDetailGetter {
     JSONObject response;
@@ -19,6 +23,8 @@ public class StateDetailGetter {
     private int vaccinationsInitiated;
     private int vaccinationsCompleted;
     private int vaccinesAdministered;
+
+    public StateDetailGetter(){}
 
     public StateDetailGetter(JSONObject response){
         this.response = response;
@@ -39,6 +45,8 @@ public class StateDetailGetter {
             vaccinationsInitiated = actuals.getInt("vaccinationsInitiated");
             vaccinationsCompleted = actuals.getInt("vaccinationsCompleted");
             vaccinesAdministered = actuals.getInt("vaccinesAdministered");
+
+            Log.d("StateDetailGetter", "StateDetailGetter: "+ state+overall);
         } catch (JSONException e) {
             e.printStackTrace();
         }

@@ -24,20 +24,18 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.covid_dash.BuildConfig;
 import com.example.covid_dash.R;
-import com.example.covid_dash.StateDetailGetter;
+import com.example.covid_dash.states.StateDetail;
+import com.example.covid_dash.states.StateDetailGetter;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
+import java.io.Serializable;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class Search_State extends Fragment {
-    public static final String TAG = "PostsFragment";
 
-    private RecyclerView rvPosts;
     private EditText etStateSearch;
     private Button btn_State_Search;
     private String COVIDACTNOW_KEY = BuildConfig.COVIDACTNOW_KEY;
@@ -74,6 +72,7 @@ public class Search_State extends Fragment {
                 onEnter();
             }
         });
+
     }
 
     //call a api get method
@@ -85,7 +84,7 @@ public class Search_State extends Fragment {
                 @Override
                 public void onResponse(JSONObject response) {
                     StateDetailGetter details = new StateDetailGetter(response);
-                    Log.d("Search_State", "Response: " + details.getState());
+                    Log.d("Search_State", "Response: " + details.getState() + details.getOverall());
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -95,6 +94,8 @@ public class Search_State extends Fragment {
                 }
             });
         queue.add(jsonObjectRequest);
+        Intent i = new Intent(getContext(), StateDetail.class);
+        startActivity(i);
     }
 
     //When the user presses enter or presses the submit button

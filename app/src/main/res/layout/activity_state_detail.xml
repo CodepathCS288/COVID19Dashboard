@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/state"
     android:orientation="vertical"
-    tools:context=".StateDetail">
+    tools:context=".states.StateDetail">
 
     <TextView
         android:id="@+id/tvState"
