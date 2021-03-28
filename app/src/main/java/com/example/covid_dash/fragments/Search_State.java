@@ -28,6 +28,7 @@ import com.example.covid_dash.states.StateDetail;
 import com.example.covid_dash.states.StateDetailGetter;
 
 import org.json.JSONObject;
+import org.parceler.Parcels;
 
 import java.io.Serializable;
 
@@ -85,6 +86,9 @@ public class Search_State extends Fragment {
                 public void onResponse(JSONObject response) {
                     StateDetailGetter details = new StateDetailGetter(response);
                     Log.d("Search_State", "Response: " + details.getState() + details.getOverall());
+                    Intent i = new Intent(getContext(), StateDetail.class);
+                    i.putExtra("details", Parcels.wrap(details));
+                    startActivity(i);
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -94,8 +98,6 @@ public class Search_State extends Fragment {
                 }
             });
         queue.add(jsonObjectRequest);
-        Intent i = new Intent(getContext(), StateDetail.class);
-        startActivity(i);
     }
 
     //When the user presses enter or presses the submit button

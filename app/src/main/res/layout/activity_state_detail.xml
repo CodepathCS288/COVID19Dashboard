@@ -13,7 +13,7 @@
         android:layout_width="190dp"
         android:layout_height="125dp"
         android:layout_marginStart="7dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="7dp"
         android:background="@drawable/rounded_corners"
@@ -30,7 +30,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="7dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="7dp"
         android:layout_toEndOf="@+id/tvState"
@@ -169,5 +169,18 @@
         android:progressTint="#FF0000"
         android:rating="5"
         android:saveEnabled="true" />
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
 
 </RelativeLayout>

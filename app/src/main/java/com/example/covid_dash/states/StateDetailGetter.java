@@ -4,30 +4,28 @@ import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
-import java.io.Serializable;
-
-public class StateDetailGetter {
-    JSONObject response;
-    private String state;
-    private int population;
-    private int overall;
-    private int infectionRate;
-    private int cases;
-    private int newCases;
-    private int deaths;
-    private int newDeaths;
-    private int positiveTests;
-    private int negativeTests;
-    private int vaccinesDistributed;
-    private int vaccinationsInitiated;
-    private int vaccinationsCompleted;
-    private int vaccinesAdministered;
+@Parcel
+public class StateDetailGetter{
+    String state;
+    int population;
+    int overall;
+    int infectionRate;
+    int cases;
+    int newCases;
+    int deaths;
+    int newDeaths;
+    int positiveTests;
+    int negativeTests;
+    int vaccinesDistributed;
+    int vaccinationsInitiated;
+    int vaccinationsCompleted;
+    int vaccinesAdministered;
 
     public StateDetailGetter(){}
 
     public StateDetailGetter(JSONObject response){
-        this.response = response;
         try {
             state = new JSONObject(response.toString()).getString("state");
             population = new JSONObject(response.toString()).getInt("population");
