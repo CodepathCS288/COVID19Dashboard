@@ -5,17 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.covid_dash.MainActivity;
 import com.example.covid_dash.R;
 import com.example.covid_dash.fragments.Search_State;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -43,7 +40,7 @@ public class StateDetail extends AppCompatActivity{
         setContentView(R.layout.activity_state_detail);
         Log.d("StateDetail", "onCreate: "+ details.getState());
 
-        tvState = findViewById(R.id.tvState);
+        tvState = findViewById(R.id.tvCasesDetails);
         tvPopulation = findViewById(R.id.tvPopulation);
         rbRiskLevel = findViewById(R.id.rbRiskLevel);
         tvCases = findViewById(R.id.tvCases);
