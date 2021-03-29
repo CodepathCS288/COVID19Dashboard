@@ -113,12 +113,37 @@ This app shows COVID related information in a simple UI form for users to get an
    | todayDeaths |  Number | number of deaths today in that country|
    | recovered |  Number | number of recovered people  |
    | todayRecovered |  Number | number of recovered people today  |
-   | source |  String | link to the article |
+   | web_url |  String | link to the article |
    | description |  String | brief description of the articles|
-   | createdAt | DataTime |  date when article is created (default field) |
+   | pub_date | DataTime |  date when article is created (default field) |
    | headline |  String | headline of the article |      
 
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+## [Add list of network requests by screen ]
+## [Create basic snippets for each Parse network request]
+N/A
+
+## [OPTIONAL: List endpoints if using existing API such as Yelp]
+##### Covid Act Now Api
+Base URL - [https://api.covidactnow.org/v2](https://api.covidactnow.org/v2)
+
+   HTTP Verb | Endpoint | Description
+   ----------|----------|------------
+    `GET`    | /state/{state}.json?apiKey={apiKey} | get covid data for the {state}
+
+##### NovelCovid Api
+Base URL - [https://corona.lmao.ninja/v2](https://corona.lmao.ninja/v2)
+
+   HTTP Verb | Endpoint | Description
+   ----------|----------|------------
+    `GET`    | /countries/:query | (:query)=country, get the covid data for that country
+
+##### Article Search NYT Api
+Base URL - [https://api.nytimes.com/svc/search/v2/](https://api.nytimes.com/svc/search/v2/)
+
+   HTTP Verb | Endpoint | Description
+   ----------|----------|------------
+    `GET`    | /articlesearch.json?q={query}&api-key={apiKey} | get the articles with {query}
+
+
+
