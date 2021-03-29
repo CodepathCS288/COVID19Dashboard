@@ -87,9 +87,37 @@ This app shows COVID related information in a simple UI form for users to get an
 <img src=Digital-wire.gif width=200>
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+| Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | state |  String | name of the sate |
+   | riskLevel      | String   | risk level for each state |
+   | population        | Number| population of a state |
+   | positiveTests         | Number     | number of positive tests |
+   | negativeTests       | Number   | number of negative tests |
+   | infectionRate | Number   | rating out of 5 for severity of infection rate in that area |
+   | vaccinationInitiated    | Number   | number of vaccination initiated |
+   | vaccinationDistributed     | Number | number of vaccination distributed |
+   | vaccinationCompleted |  Number | number of vaccination completed |
+   | vaccinationAdministered |  Number | number of vaccination administered |
+   | totalCases |  Number | number of total cases|
+   | totalDeaths |  Number | number of total deaths|
+   | newCases |  Number | number of new cases|
+   | newDeaths |  Number | number of new deaths|
+   | country |  String | name of the counrty|
+   | populationCountry  | Number| population of a country |
+   | tests |  Number | number of tests done in that country|
+   | casesCountry |  Number | number of cases |
+   | todayCases |  Number | number of cases today |
+   | deathsCountry |  Number | number of deaths in that country|
+   | todayDeaths |  Number | number of deaths today in that country|
+   | recovered |  Number | number of recovered people  |
+   | todayRecovered |  Number | number of recovered people today  |
+   | source |  String | link to the article |
+   | description |  String | brief description of the articles|
+   | createdAt | DataTime |  date when article is created (default field) |
+   | headline |  String | headline of the article |      
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
