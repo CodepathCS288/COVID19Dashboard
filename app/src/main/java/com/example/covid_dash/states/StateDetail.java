@@ -56,6 +56,9 @@ public class StateDetail extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Toast.makeText(StateDetail.this, "Cases clicked", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(StateDetail.this, CasesDetail.class);
+                i.putExtra("details", Parcels.wrap(details));
+                startActivity(i);
             }
         });
         tvPositiveTests.setText("Positive\nTests\n"+details.positiveTests);
@@ -65,6 +68,9 @@ public class StateDetail extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Toast.makeText(StateDetail.this, "Vaccination clicked", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(StateDetail.this, CasesDetail.class);
+                i.putExtra("details", Parcels.wrap(details));
+                startActivity(i);
             }
         });
 

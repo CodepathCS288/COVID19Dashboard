@@ -104,5 +104,4 @@
         app:autoSizeTextType="none"
         tools:text="New\nDeaths\n1234567890" />
 
-
 </RelativeLayout>
