@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -68,7 +69,7 @@ public class StateDetail extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Toast.makeText(StateDetail.this, "Vaccination clicked", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(StateDetail.this, CasesDetail.class);
+                Intent i = new Intent(StateDetail.this, VaccinationsDetail.class);
                 i.putExtra("details", Parcels.wrap(details));
                 startActivity(i);
             }
