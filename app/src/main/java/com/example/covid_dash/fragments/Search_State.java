@@ -115,7 +115,6 @@ public class Search_State extends Fragment {
         }
         //get the first 2 char and make it uppercase
         state = state.substring(0,2).toUpperCase();
-        Toast.makeText(getContext(), "State "+state, Toast.LENGTH_SHORT).show();
         viewStateDetail(state);
     }
 }
