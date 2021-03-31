@@ -11,7 +11,7 @@ public class StateDetailGetter{
     String state;
     int population;
     int overall;
-    int infectionRate;
+    double infectionRate;
     int cases;
     int newCases;
     int deaths;
@@ -31,7 +31,7 @@ public class StateDetailGetter{
             population = new JSONObject(response.toString()).getInt("population");
             JSONObject risklevel = new JSONObject(response.toString()).getJSONObject("riskLevels");
             overall = risklevel.getInt("overall");
-            infectionRate = risklevel.getInt("infectionRate");
+            infectionRate = new JSONObject(response.toString()).getJSONObject("metrics").getDouble("infectionRate");
             JSONObject actuals = new JSONObject(response.toString()).getJSONObject("actuals");
             cases = actuals.getInt("cases");
             newCases = actuals.getInt("newCases");
@@ -62,7 +62,7 @@ public class StateDetailGetter{
         return overall;
     }
 
-    public int getInfectionRate() {
+    public double getInfectionRate() {
         return infectionRate;
     }
 

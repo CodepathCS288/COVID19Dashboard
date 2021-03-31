@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".fragments.Search_State">
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/etStateSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,9 +18,11 @@
         android:layout_marginRight="32dp"
         android:background="@android:color/white"
         android:hint="@string/search_by_state"
+        android:imeOptions="actionDone"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="24dp" />
+        android:textSize="24dp"
+        android:completionThreshold="1"/>
 
     <Button
         android:id="@+id/btn_State_Search"

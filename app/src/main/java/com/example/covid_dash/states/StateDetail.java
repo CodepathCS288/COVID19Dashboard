@@ -1,6 +1,7 @@
 package com.example.covid_dash.states;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -8,8 +9,10 @@ import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,7 +23,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.parceler.Parcels;
 
-public class StateDetail extends AppCompatActivity{
+public class StateDetail extends Fragment {
 
     TextView tvState;
     TextView tvPopulation;
@@ -30,76 +33,53 @@ public class StateDetail extends AppCompatActivity{
     TextView tvNegativeTests;
     TextView tvInfectionRate;
     TextView tvVaccinations;
-    final FragmentManager fragmentManager = getSupportFragmentManager();
-    private BottomNavigationView bottomNavigationView;
+    StateDetailGetter details;
 
+    public StateDetail() {}
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        details = (StateDetailGetter) Parcels.unwrap(getArguments().getParcelable("details"));
+        return inflater.inflate(R.layout.activity_state_detail, container, false);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        StateDetailGetter details = (StateDetailGetter) Parcels.unwrap(getIntent().getParcelableExtra("details"));
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_state_detail);
-        Log.d("StateDetail", "onCreate: "+ details.getState());
-
-        tvState = findViewById(R.id.tvCasesDetails);
-        tvPopulation = findViewById(R.id.tvPopulation);
-        rbRiskLevel = findViewById(R.id.rbRiskLevel);
-        tvCases = findViewById(R.id.tvCases);
-        tvPositiveTests = findViewById(R.id.tvPositiveTests);
-        tvNegativeTests = findViewById(R.id.tvNegativeTests);
-        tvInfectionRate = findViewById(R.id.tvInfectionRate);
-        tvVaccinations = findViewById(R.id.tvVaccinations);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.d("StateDetail", "onViewCreated: " + details.getState());
+        tvState = view.findViewById(R.id.tvCasesDetails);
+        tvPopulation = view.findViewById(R.id.tvPopulation);
+        rbRiskLevel = view.findViewById(R.id.rbRiskLevel);
+        tvCases = view.findViewById(R.id.tvCases);
+        tvPositiveTests = view.findViewById(R.id.tvPositiveTests);
+        tvNegativeTests = view.findViewById(R.id.tvNegativeTests);
+        tvInfectionRate = view.findViewById(R.id.tvInfectionRate);
+        tvVaccinations = view.findViewById(R.id.tvVaccinations);
 
         tvState.setText(details.getState());
-        tvPopulation.setText("Population\n"+details.getPopulation());
+        tvPopulation.setText("Population\n" + details.getPopulation());
         rbRiskLevel.setRating(details.getOverall());
         tvCases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(StateDetail.this, "Cases clicked", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(StateDetail.this, CasesDetail.class);
+                Toast.makeText(getContext(), "Cases clicked", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getContext(), CasesDetail.class);
                 i.putExtra("details", Parcels.wrap(details));
                 startActivity(i);
             }
         });
-        tvPositiveTests.setText("Positive\nTests\n"+details.positiveTests);
-        tvNegativeTests.setText("Negative\nTests\n"+details.negativeTests);
-        tvInfectionRate.setText("Infection\nRate\n"+details.infectionRate);
+        tvPositiveTests.setText("Positive\nTests\n" + details.getPositiveTests());
+        tvNegativeTests.setText("Negative\nTests\n" + details.getNegativeTests());
+        tvInfectionRate.setText("Infection\nRate\n" + String.format("%.2f", details.getInfectionRate()));
         tvVaccinations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(StateDetail.this, "Vaccination clicked", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(StateDetail.this, VaccinationsDetail.class);
+                Toast.makeText(getContext(), "Vaccination clicked", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getContext(), VaccinationsDetail.class);
                 i.putExtra("details", Parcels.wrap(details));
                 startActivity(i);
             }
         });
-
-        bottomNavigationView = findViewById(R.id.bottomNavigation);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                Fragment fragment;
-                switch (menuItem.getItemId()) {
-                    case R.id.action_states:
-                        Toast.makeText(StateDetail.this, "In state", Toast.LENGTH_SHORT).show();
-                        fragment = new Search_State();
-                        break;
-                    case R.id.action_countries:
-                        Toast.makeText(StateDetail.this, "In countries", Toast.LENGTH_SHORT).show();
-                        fragment = new Search_State();
-                        break;
-                    case R.id.action_news:
-                    default:
-                        Toast.makeText(StateDetail.this, "in news", Toast.LENGTH_SHORT).show();
-                        fragment = new Search_State();
-                        break;
-                }
-                fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
-                return true;
-            }
-        });
-
     }
 }

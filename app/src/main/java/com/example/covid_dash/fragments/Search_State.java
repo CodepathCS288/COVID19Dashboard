@@ -1,20 +1,19 @@
 package com.example.covid_dash.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -30,14 +29,12 @@ import com.example.covid_dash.states.StateDetailGetter;
 import org.json.JSONObject;
 import org.parceler.Parcels;
 
-import java.io.Serializable;
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class Search_State extends Fragment {
-
-    private EditText etStateSearch;
+    private String[] states;
+    private AutoCompleteTextView etStateSearch;
     private Button btn_State_Search;
     private String COVIDACTNOW_KEY = BuildConfig.COVIDACTNOW_KEY;
 
@@ -56,24 +53,24 @@ public class Search_State extends Fragment {
 
         etStateSearch = view.findViewById(R.id.etStateSearch);
         btn_State_Search = view.findViewById(R.id.btn_State_Search);
+        states = getResources().getStringArray(R.array.states);
 
-        etStateSearch.setOnKeyListener(new View.OnKeyListener() {
+        ArrayAdapter<String> adpater = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, states);
+        etStateSearch.setAdapter(adpater);
+
+        etStateSearch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)){
-                    onEnter();
-                    return true;
-                }
-                return false;
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                onEnter();
             }
         });
+
         btn_State_Search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onEnter();
             }
         });
-
     }
 
     //call a api get method
@@ -85,10 +82,12 @@ public class Search_State extends Fragment {
                 @Override
                 public void onResponse(JSONObject response) {
                     StateDetailGetter details = new StateDetailGetter(response);
-                    Log.d("Search_State", "Response: " + details.getState() + details.getOverall());
-                    Intent i = new Intent(getContext(), StateDetail.class);
-                    i.putExtra("details", Parcels.wrap(details));
-                    startActivity(i);
+                    //start the fragment and call it with the detail instance in the args
+                    Fragment fragment = new StateDetail();
+                    Bundle args = new Bundle();
+                    args.putParcelable("details", Parcels.wrap(details));
+                    fragment.setArguments(args);
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.flContainer, fragment).commit();
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -103,16 +102,20 @@ public class Search_State extends Fragment {
     //When the user presses enter or presses the submit button
     private void onEnter(){
         //get the text
-        String state = etStateSearch.getText().toString().toUpperCase();
+        String state = etStateSearch.getText().toString();
+        //if the text is empty
         if(state.isEmpty()){
             Toast.makeText(getContext(), "State cannot be empty", Toast.LENGTH_SHORT).show();
             return;
         }
-        if((state.length() <= 1) || (state.length() > 2)){
-            Toast.makeText(getContext(), "State must be initial letters", Toast.LENGTH_SHORT).show();
+        //if the length of the state is <=1 or if the length is > 2 AND the text doesn't have '-'
+        if((state.length() <= 1) || ((state.length() > 2) && (state.charAt(2) != '-'))){
+            Toast.makeText(getContext(), "State must be in Abbreviations/Select from the menu" , Toast.LENGTH_SHORT).show();
             return;
         }
-        Toast.makeText(getContext(), "State"+state, Toast.LENGTH_SHORT).show();
+        //get the first 2 char and make it uppercase
+        state = state.substring(0,2).toUpperCase();
+        Toast.makeText(getContext(), "State "+state, Toast.LENGTH_SHORT).show();
         viewStateDetail(state);
     }
 }
