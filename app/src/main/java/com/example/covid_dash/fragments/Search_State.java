@@ -61,7 +61,9 @@ public class Search_State extends Fragment {
         etStateSearch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                btn_State_Search.setEnabled(false);
                 onEnter();
+
             }
         });
 
