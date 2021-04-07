@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/state"
+    android:orientation="vertical"
+    tools:context=".states.VaccinationsDetail">
+
+    <TextView
+        android:id="@+id/tvVaccinationsDetail"
+        android:layout_width="350dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="sans-serif"
+        android:paddingTop="20dp"
+        android:text="Vaccinations"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        app:autoSizeTextType="uniform" />
+
+    <TextView
+        android:id="@+id/tvVaccinationsInitiated"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/tvVaccinationsDetail"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toStartOf="@+id/tvTotalDeaths"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="true"
+        android:paddingTop="25dp"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        android:textSize="32sp"
+        app:autoSizeTextType="none"
+        tools:text="Initiated\n1234567890" />
+
+
+    <TextView
+        android:id="@+id/tvVaccinationsDistributed"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/tvVaccinationsDetail"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="true"
+        android:paddingTop="25dp"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        android:textSize="32sp"
+        app:autoSizeTextType="none"
+        tools:text="Distributed\n1234567890" />
+
+    <TextView
+        android:id="@+id/tvVaccinationsCompleted"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/tvVaccinationsInitiated"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toStartOf="@+id/tvVaccinationsAdministered"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="true"
+        android:paddingTop="25dp"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        android:textSize="32sp"
+        app:autoSizeTextType="none"
+        tools:text="Completed\n1234567890" />
+
+    <TextView
+        android:id="@+id/tvVaccinationsAdministered"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/tvVaccinationsDistributed"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="true"
+        android:paddingTop="25dp"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        android:textSize="32sp"
+        app:autoSizeTextType="none"
+        tools:text="Administered\n1234567890" />
+
+</RelativeLayout>
