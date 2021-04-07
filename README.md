@@ -33,8 +33,8 @@ This app shows COVID related information in a simple UI form for users to get an
 
 **Optional Nice-to-have Stories**
 
-* Ability to use the app offline by downloading the data for the day when you have access to the internet and storing it in a json file and using it to show the data offline.
-* Ability to use the users location data to show them the data in their state without asking them to enter the state each time.
+- [ ] Ability to use the app offline by downloading the data for the day when you have access to the internet and storing it in a json file and using it to show the data offline.
+- [ ] Ability to use the users location data to show them the data in their state without asking them to enter the state each time.
 
 <img src="https://github.com/CodepathCS288/COVIDDash/blob/main/States.gif" width=400>
 
