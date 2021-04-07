@@ -26,7 +26,7 @@ This app shows COVID related information in a simple UI form for users to get an
 
 - [x] Users can start the app and see the data for states based on what state they enter in the search bar.
 - [ ] Users can switch between different tabs to view data for other countries by searching the countries.
-- [ ] Click on certain elements of the data to view more details.
+* Click on certain elements of the data to view more details.
    - [x] States
    - [ ] Countries
 - [ ] Users can also view the latest headlines from the New York times related to COVID
