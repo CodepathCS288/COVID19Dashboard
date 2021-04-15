@@ -7,7 +7,7 @@
     android:accessibilityLiveRegion="assertive"
     android:background="@drawable/earth"
     android:orientation="vertical"
-    tools:context=".SearchCountry">
+    tools:context=".fragments.Search_Country">
 
     <AutoCompleteTextView
         android:id="@+id/etCountrySearch"

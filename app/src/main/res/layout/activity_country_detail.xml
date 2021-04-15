@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/earth"
     android:orientation="vertical"
-    tools:context=".CountryDetail">
+    tools:context=".countries.CountryDetail">
 
     <TextView
         android:id="@+id/tvCountryDetails"
