@@ -51,8 +51,8 @@ public class Search_State extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        etStateSearch = view.findViewById(R.id.etStateSearch);
-        btn_State_Search = view.findViewById(R.id.btn_State_Search);
+        etStateSearch = view.findViewById(R.id.etCountrySearch);
+        btn_State_Search = view.findViewById(R.id.btn_Country_Search);
         states = getResources().getStringArray(R.array.states);
 
         ArrayAdapter<String> adpater = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, states);

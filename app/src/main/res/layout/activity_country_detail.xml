@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/earth"
+    android:orientation="vertical"
+    tools:context=".CountryDetail">
+
+    <TextView
+        android:id="@+id/tvCountryDetails"
+        android:layout_width="190dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        app:autoSizeTextType="uniform"
+        tools:text="USA" />
+
+    <TextView
+        android:id="@+id/tvPopulation"
+        android:layout_width="190dp"
+        android:layout_height="125dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toEndOf="@+id/tvCountryDetails"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="true"
+        android:paddingTop="25dp"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        android:textSize="32sp"
+        app:autoSizeTextType="none"
+        tools:text="Population\n1234567890" />
+
+    <TextView
+        android:id="@+id/tvTests"
+        android:layout_width="400dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/tvCountryDetails"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toEndOf="@+id/tvCountryDetails"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        app:autoSizeTextType="uniform"
+        tools:text="Tests\n1234567890" />
+
+    <TextView
+        android:id="@+id/tvCasesCountry"
+        android:layout_width="500dp"
+        android:layout_height="330dp"
+        android:layout_below="@+id/tvTests"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="sans-serif"
+        android:includeFontPadding="true"
+        android:paddingTop="10dp"
+        android:text="Cases\nCases:1234567890\nToday'sCases:1234567\nDeaths:1234567890\nToday'sDeaths:1234567890\nRecovered:1234567890\nToday's Recovered:1234567890"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        android:textSize="32sp"
+        app:autoSizeTextType="none" />
+
+</RelativeLayout>

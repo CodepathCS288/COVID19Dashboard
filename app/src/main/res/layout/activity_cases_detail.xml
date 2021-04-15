@@ -9,7 +9,7 @@
     tools:context=".states.CasesDetail">
 
     <TextView
-        android:id="@+id/tvCasesDetails"
+        android:id="@+id/tvCountryDetails"
         android:layout_width="350dp"
         android:layout_height="125dp"
         android:layout_marginStart="30dp"
@@ -27,7 +27,7 @@
         android:id="@+id/tvTotalCases"
         android:layout_width="190dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/tvCasesDetails"
+        android:layout_below="@+id/tvCountryDetails"
         android:layout_marginStart="7dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="7dp"
@@ -48,7 +48,7 @@
         android:id="@+id/tvTotalDeaths"
         android:layout_width="190dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/tvCasesDetails"
+        android:layout_below="@+id/tvCountryDetails"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="7dp"
         android:layout_marginTop="40dp"

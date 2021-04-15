@@ -9,7 +9,7 @@
     tools:context=".states.StateDetail">
 
     <TextView
-        android:id="@+id/tvCasesDetails"
+        android:id="@+id/tvCountryDetails"
         android:layout_width="190dp"
         android:layout_height="125dp"
         android:layout_marginStart="7dp"
@@ -33,7 +33,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="7dp"
-        android:layout_toEndOf="@+id/tvCasesDetails"
+        android:layout_toEndOf="@+id/tvCountryDetails"
         android:background="@drawable/rounded_corners"
         android:fontFamily="sans-serif"
         android:includeFontPadding="true"
@@ -48,13 +48,13 @@
         android:id="@+id/tvRiskLevel"
         android:layout_width="190dp"
         android:layout_height="125dp"
-        android:layout_below="@+id/tvCasesDetails"
+        android:layout_below="@+id/tvCountryDetails"
         android:layout_alignParentStart="true"
         android:layout_marginStart="7dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="7dp"
-        android:layout_toEndOf="@+id/tvCasesDetails"
+        android:layout_toEndOf="@+id/tvCountryDetails"
         android:background="@drawable/rounded_corners"
         android:fontFamily="sans-serif"
         android:text="Risk\nLevel\n"
@@ -92,7 +92,7 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="7dp"
-        android:layout_toEndOf="@+id/tvCasesDetails"
+        android:layout_toEndOf="@+id/tvCountryDetails"
         android:background="@drawable/rounded_corners"
         android:fontFamily="sans-serif"
         android:textAlignment="center"
@@ -119,7 +119,7 @@
         tools:text="Negative\n\Tests\n1234567890" />
 
     <TextView
-        android:id="@+id/tvInfectionRate"
+        android:id="@+id/tvTests"
         android:layout_width="190dp"
         android:layout_height="125dp"
         android:layout_below="@+id/tvPositiveTests"
@@ -137,7 +137,7 @@
         tools:text="Infection\nRate\n1234567890" />
 
     <TextView
-        android:id="@+id/tvVaccinations"
+        android:id="@+id/tvCasesCountry"
         android:layout_width="190dp"
         android:layout_height="125dp"
         android:layout_below="@+id/tvNegativeTests"
@@ -146,7 +146,7 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="7dp"
-        android:layout_toEndOf="@+id/tvInfectionRate"
+        android:layout_toEndOf="@+id/tvTests"
         android:background="@drawable/rounded_corners"
         android:fontFamily="sans-serif"
         android:includeFontPadding="true"

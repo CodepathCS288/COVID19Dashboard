@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:accessibilityLiveRegion="assertive"
-    android:background="@drawable/state"
+    android:background="@drawable/earth"
     android:orientation="vertical"
-    tools:context=".fragments.Search_State">
+    tools:context=".SearchCountry">
 
     <AutoCompleteTextView
         android:id="@+id/etCountrySearch"
@@ -17,12 +17,12 @@
         android:layout_marginTop="250dp"
         android:layout_marginRight="32dp"
         android:background="@android:color/white"
-        android:hint="@string/search_by_state"
+        android:completionThreshold="1"
+        android:hint="@string/search_by_country"
         android:imeOptions="actionDone"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="24dp"
-        android:completionThreshold="1"/>
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btn_Country_Search"

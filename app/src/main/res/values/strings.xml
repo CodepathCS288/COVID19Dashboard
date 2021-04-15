@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">COVID-Dash</string>
     <string name="search_by_state">Search by State</string>
+    <string name="search_by_country">Search by Country</string>
     <string name="search">Search</string>
 
     <string-array name="states">

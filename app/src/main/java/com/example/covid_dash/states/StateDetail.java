@@ -42,14 +42,14 @@ public class StateDetail extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Log.d("StateDetail", "onViewCreated: " + details.getState());
-        tvState = view.findViewById(R.id.tvCasesDetails);
+        tvState = view.findViewById(R.id.tvCountryDetails);
         tvPopulation = view.findViewById(R.id.tvPopulation);
         rbRiskLevel = view.findViewById(R.id.rbRiskLevel);
         tvCases = view.findViewById(R.id.tvCases);
         tvPositiveTests = view.findViewById(R.id.tvPositiveTests);
         tvNegativeTests = view.findViewById(R.id.tvNegativeTests);
-        tvInfectionRate = view.findViewById(R.id.tvInfectionRate);
-        tvVaccinations = view.findViewById(R.id.tvVaccinations);
+        tvInfectionRate = view.findViewById(R.id.tvTests);
+        tvVaccinations = view.findViewById(R.id.tvCasesCountry);
 
         tvState.setText(details.getState());
         tvPopulation.setText("Population\n" + details.getPopulation());
