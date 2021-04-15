@@ -90,8 +90,8 @@ public class Search_Country extends Fragment {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getContext(), "Invalid State", Toast.LENGTH_SHORT).show();
-                        Log.e("Search_State", "error: " + error.toString());
+                        Toast.makeText(getContext(), "Invalid Country", Toast.LENGTH_SHORT).show();
+                        Log.e("Search_Country", "error: " + error.toString());
                     }
                 });
         queue.add(jsonObjectRequest);
@@ -103,7 +103,7 @@ public class Search_Country extends Fragment {
         String country = etCountrySearch.getText().toString();
         //if the text is empty
         if(country.isEmpty()){
-            Toast.makeText(getContext(), "State cannot be empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Country cannot be empty", Toast.LENGTH_SHORT).show();
             return;
         }
 
