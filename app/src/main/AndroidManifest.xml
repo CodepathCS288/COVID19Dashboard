@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.COVIDDash">
-        <activity android:name=".states.VaccinationsDetail"></activity>
+        <activity android:name=".country.CountryDetail"></activity>
+        <activity android:name=".fragments.Search_Country" />
+        <activity android:name=".states.VaccinationsDetail" />
         <activity android:name=".states.CasesDetail" />
         <activity android:name=".states.StateDetail" />
         <activity android:name=".MainActivity">
