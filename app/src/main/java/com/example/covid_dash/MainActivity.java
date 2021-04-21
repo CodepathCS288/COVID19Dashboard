@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.covid_dash.fragments.Search_Country;
 import com.example.covid_dash.fragments.Search_State;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -33,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new Search_State();
                         break;
                     case R.id.action_countries:
-                        Toast.makeText(MainActivity.this, "In countries", Toast.LENGTH_SHORT).show();
-                        fragment = new Search_State();
+                        fragment = new Search_Country();
                         break;
                     case R.id.action_news:
                     default:

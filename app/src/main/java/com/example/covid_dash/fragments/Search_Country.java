@@ -24,6 +24,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.covid_dash.BuildConfig;
 import com.example.covid_dash.R;
+import com.example.covid_dash.country.CountryDetail;
+import com.example.covid_dash.country.CountryDetailGetter;
 
 import org.json.JSONObject;
 import org.parceler.Parcels;

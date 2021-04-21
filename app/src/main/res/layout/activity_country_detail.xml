@@ -76,10 +76,11 @@
         android:background="@drawable/rounded_corners"
         android:fontFamily="sans-serif"
         android:includeFontPadding="true"
-        android:paddingTop="10dp"
-        android:text="Cases\nCases:1234567890\nToday'sCases:1234567\nDeaths:1234567890\nToday'sDeaths:1234567890\nRecovered:1234567890\nToday's Recovered:1234567890"
-        android:textAlignment="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="25dp"
+        android:text="Cases:1234567890\nToday'sCases:1234567\nDeaths:1234567890\nToday'sDeaths:1234567890\nRecovered:1234567890\nToday's Recovered:1234567890"
+        android:textAlignment="viewStart"
         android:textColor="#E1E1E1"
-        android:textSize="32sp"
+        android:textSize="30sp"
         app:autoSizeTextType="none" />
 </RelativeLayout>
