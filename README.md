@@ -38,7 +38,7 @@ This app shows COVID related information in a simple UI form for users to get an
 
 ### Gifs
 ##### Unit 11: Countries
-<img src="countries.gif" width=400>
+<img src="countries.gif" width=350>
 
 ##### Unit 10: States
 <img src="https://github.com/CodepathCS288/COVIDDash/blob/main/States.gif" width=400>
