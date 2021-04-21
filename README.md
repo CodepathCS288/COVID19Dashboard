@@ -25,10 +25,10 @@ This app shows COVID related information in a simple UI form for users to get an
 **Required Must-have Stories**
 
 - [x] Users can start the app and see the data for states based on what state they enter in the search bar.
-- [ ] Users can switch between different tabs to view data for other countries by searching the countries.
+- [X] Users can switch between different tabs to view data for other countries by searching the countries.
 * Click on certain elements of the data to view more details.
    - [x] States
-   - [ ] Countries
+   - [X] Countries
 - [ ] Users can also view the latest headlines from the New York times related to COVID
 
 **Optional Nice-to-have Stories**
@@ -36,7 +36,13 @@ This app shows COVID related information in a simple UI form for users to get an
 - [ ] Ability to use the app offline by downloading the data for the day when you have access to the internet and storing it in a json file and using it to show the data offline.
 - [ ] Ability to use the users location data to show them the data in their state without asking them to enter the state each time.
 
+### Gifs
+##### Unit 11: Countries
+<img src="countries.gif" width=400>
+
+##### Unit 10: States
 <img src="https://github.com/CodepathCS288/COVIDDash/blob/main/States.gif" width=400>
+
 
 
 ### 2. Screen Archetypes
