@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Headlines">
+
+    <TextView
+        android:id="@+id/tvHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Headline" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeadline"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        tools:text="This a description of the headline" />
+
+    <TextView
+        android:id="@+id/tvLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDescription"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:text="Read Full Article Here:" />
+
+    <TextView
+        android:id="@+id/tvTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLink"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        tools:text="Dec 25, 2020" />
+</RelativeLayout>
