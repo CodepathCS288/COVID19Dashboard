@@ -19,6 +19,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "COVIDACTNOW_KEY", apikeyProperties['COVIDACTNOW_KEY'])
+        buildConfigField("String", "NYT_KEY", apikeyProperties['NYT_KEY'])
     }
 
     buildTypes {
@@ -43,5 +44,7 @@ dependencies {
     implementation 'com.android.volley:volley:1.2.0'
     annotationProcessor 'org.parceler:parceler:1.1.12'
     implementation 'org.parceler:parceler-api:1.1.12'
+    implementation 'com.codepath.libraries:asynchttpclient:2.0.0'
+
 
 }

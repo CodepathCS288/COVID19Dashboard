@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.COVIDDash">
         <activity android:name=".Headlines"></activity>
-        <activity android:name=".Nyt" />
+        <activity android:name=".NytActivity" />
         <activity android:name=".country.CountryDetail" />
         <activity android:name=".fragments.Search_Country" />
         <activity android:name=".states.VaccinationsDetail" />

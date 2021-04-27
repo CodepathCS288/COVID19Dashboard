@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new Search_Country();
                         break;
                     case R.id.action_news:
+                        fragment = new NytActivity();
+                        break;
                     default:
                         Toast.makeText(MainActivity.this, "in news", Toast.LENGTH_SHORT).show();
                         fragment = new Search_State();
