@@ -29,7 +29,7 @@ This app shows COVID related information in a simple UI form for users to get an
 * Click on certain elements of the data to view more details.
    - [x] States
    - [X] Countries
-- [ ] Users can also view the latest headlines from the New York times related to COVID
+- [x] Users can also view the latest headlines from the New York times related to COVID
 
 **Optional Nice-to-have Stories**
 
@@ -37,6 +37,9 @@ This app shows COVID related information in a simple UI form for users to get an
 - [ ] Ability to use the users location data to show them the data in their state without asking them to enter the state each time.
 
 ### Gifs
+##### Unit 12: NYT
+<img src="nyt.gif" width=350>
+
 ##### Unit 11: Countries
 <img src="countries.gif" width=350>
 
