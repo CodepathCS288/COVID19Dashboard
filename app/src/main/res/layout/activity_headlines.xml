@@ -4,13 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="0dp"
     tools:context=".Headlines">
 
     <TextView
         android:id="@+id/tvHeadline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
         android:textStyle="bold"
         tools:text="Headline" />
 
@@ -22,6 +27,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="2dp"
+        android:textSize="16dp"
         tools:text="This a description of the headline" />
 
     <TextView
@@ -34,7 +40,9 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="0dp"
-        android:text="Read Full Article Here:" />
+        android:text="Read Full Article Here:"
+        android:textColor="#051DA5"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/tvTimeStamp"
