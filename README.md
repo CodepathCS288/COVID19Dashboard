@@ -37,6 +37,9 @@ This app shows COVID related information in a simple UI form for users to get an
 - [ ] Ability to use the users location data to show them the data in their state without asking them to enter the state each time.
 
 ### Gifs
+##### Unit 13: 
+<img src="final.gif" width=350>
+
 ##### Unit 12: NYT
 <img src="nyt.gif" width=350>
 
