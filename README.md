@@ -30,6 +30,7 @@ This app shows COVID related information in a simple UI form for users to get an
    - [x] States
    - [X] Countries
 - [x] Users can also view the latest headlines from the New York times related to COVID
+- [x] Beautify the app 
 
 **Optional Nice-to-have Stories**
 
